@@ -13,19 +13,19 @@ export const skillsData: SkillCategory[] = [
     items: [
       "Machine Learning",
       "Deep Learning",
-      "Computer Vision",
       "Natural Language Processing (NLP)",
       "Feature Engineering",
       "Time Series Forecasting",
+      "Computer Vision",
       "Statistical Analysis"
     ]
   },
   {
     category: "Frameworks & Libraries",
-    items: ["Pandas", "NumPy", "Scikit-Learn", "TensorFlow", "PyTorch", "OpenCV", "Flask"]
+    items: ["Pandas", "NumPy", "Scikit-Learn", "TensorFlow", "PyTorch", "OpenCV", "Flask", "Streamlit"]
   },
   {
     category: "Tools & Platforms",
-    items: ["Git", "GitHub", "Jupyter Notebook", "Tableau", "Linux", "Figma"]
+    items: ["Git", "GitHub", "Jupyter Notebook", "Tableau", "draw.io", "Figma"]
   }
 ];

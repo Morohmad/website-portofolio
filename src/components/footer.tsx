@@ -2,9 +2,13 @@
 
 import React from "react";
 import { profileData } from "../data/profile";
-import { Mail, MapPin, Send } from "lucide-react";
+import { MapPin } from "lucide-react";
 
 export default function Footer() {
+  // Menyiapkan email tujuan dan URL compose Gmail langsung
+  const rawEmail = profileData.contacts.email.replace("mailto:", "").trim();
+  const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${rawEmail}`;
+
   return (
     <footer id="contact" className="py-8 bg-cyber-card/60 border-t border-cyber-border/80 relative">
       <div className="w-full max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col items-center text-center">
@@ -16,22 +20,41 @@ export default function Footer() {
 
         {/* Subtitle / Description */}
         <p className="text-slate-300 text-xs md:text-sm max-w-lg leading-relaxed mb-5">
-          Terbuka untuk peluang riset, kolaborasi proyek Machine Learning, maupun posisi Data Science.
+          Terbuka untuk peluang riset, kolaborasi proyek Machine Learning, maupun posisi Data Science & AI.
         </p>
 
-        {/* Action Button: Mail Me (Ukuran Pas) */}
+        {/* Action Button: Langsung ke Gmail dengan Logo Berwarna Asli */}
         <a
-          href={profileData.contacts.email}
+          href={gmailComposeUrl}
+          target="_blank"
+          rel="noopener noreferrer"
           className="
-            inline-flex items-center gap-2 px-5 py-2.5 mb-6 rounded-lg 
-            bg-cyber-accent text-slate-950 font-semibold text-xs md:text-sm
-            hover:bg-sky-300 transition-all duration-300 
-            shadow-md shadow-sky-500/10 hover:shadow-sky-500/20
+            inline-flex items-center gap-2.5 px-5 py-2.5 mb-6 rounded-lg 
+            bg-slate-900 border border-cyber-border/80 text-white font-medium text-xs md:text-sm
+            hover:border-cyber-accent hover:bg-slate-800/80 transition-all duration-300 
+            shadow-md shadow-black/30 hover:shadow-cyan-500/10
           "
         >
-          <Mail className="w-4 h-4" />
+          {/* Logo Asli Gmail (SVG Vector 4 Warna Resmi Google) */}
+          <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24">
+            <path
+              fill="#4285F4"
+              d="M22.5 12c0-.68-.06-1.33-.17-1.95H12v3.69h5.89c-.25 1.37-1.02 2.53-2.18 3.31v2.75h3.53C21.3 17.89 22.5 15.18 22.5 12z"
+            />
+            <path
+              fill="#34A853"
+              d="M12 22.5c2.84 0 5.21-.94 6.95-2.55l-3.53-2.75c-.94.63-2.14 1-3.42 1-2.63 0-4.86-1.78-5.66-4.17H2.69v2.84C4.43 20.34 7.97 22.5 12 22.5z"
+            />
+            <path
+              fill="#FBBC05"
+              d="M6.34 14.03c-.2-.6-.31-1.25-.31-1.91s.11-1.31.31-1.91V7.37H2.69C1.97 8.8 1.56 10.36 1.56 12s.41 3.2 1.13 4.63l3.65-2.84z"
+            />
+            <path
+              fill="#EA4335"
+              d="M12 5.38c1.54 0 2.93.53 4.02 1.57l3.01-3.01C17.21 2.22 14.84 1.5 12 1.5 7.97 1.5 4.43 3.66 2.69 7.37l3.65 2.84c.8-2.39 3.03-4.17 5.66-4.17z"
+            />
+          </svg>
           <span>Kirim Email</span>
-          <Send className="w-3.5 h-3.5 ml-0.5" />
         </a>
 
         {/* Location & Social Links Info */}
