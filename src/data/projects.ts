@@ -9,7 +9,7 @@ export const projectsData = [
     description:
       "Fine-tuning IndoBERT-base (FP16 mixed-precision) pada ±740k ulasan DANA untuk 3-class sentiment analysis dengan 88.61% accuracy dan 86.64% F1-score.",
 
-    image: "/sentimen.png",
+    image: "/dana.png",
 
     metrics: "740K+ Reviews | 88.61% Accuracy",
 
@@ -35,7 +35,7 @@ export const projectsData = [
     description:
       "Beneficiary identity verification system integrating facial recognition and geolocation validation to prevent duplicate aid disbursement.",
 
-    image: "/profile.jpeg",
+    image: "/satukan.png",
 
     metrics: "Face Recognition",
 

@@ -1,13 +1,31 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { projectsData } from "../data/projects";
 import { Code2, ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Projects() {
   const [startIndex, setStartIndex] = useState(0);
+  const [cardsCount, setCardsCount] = useState(3);
   const total = projectsData.length;
+
+  // Responsif: 1 kartu di mobile (<768px), 2 di tablet (<1024px), 3 di desktop
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setCardsCount(1);
+      } else if (window.innerWidth < 1024) {
+        setCardsCount(2);
+      } else {
+        setCardsCount(3);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handlePrev = () => {
     if (total === 0) return;
@@ -19,13 +37,12 @@ export default function Projects() {
     setStartIndex((prev) => (prev + 1) % total);
   };
 
+  // Mengambil kartu sesuai jumlah kapasitas layar saat ini
   const visibleProjects =
     total > 0
-      ? [
-          projectsData[startIndex % total],
-          projectsData[(startIndex + 1) % total],
-          projectsData[(startIndex + 2) % total],
-        ]
+      ? Array.from({ length: Math.min(cardsCount, total) }).map(
+          (_, idx) => projectsData[(startIndex + idx) % total]
+        )
       : [];
 
   return (
@@ -42,6 +59,11 @@ export default function Projects() {
           </div>
 
           <div className="flex items-center gap-2">
+            {/* Indikator halaman hanya muncul di HP */}
+            <span className="text-xs font-mono text-slate-400 mr-2 md:hidden">
+              {startIndex + 1} / {total}
+            </span>
+
             <button
               onClick={handlePrev}
               className="p-2.5 rounded-lg bg-cyber-card border border-cyber-border text-slate-300 hover:text-cyber-accent hover:border-cyber-accent/60 transition-all duration-200 active:scale-95 flex items-center justify-center shadow-sm"
@@ -59,8 +81,16 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Grid 3 Kolom Menyamping */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Dynamic Grid: 1 Kolom di Mobile, 2 di Tablet, 3 di Desktop */}
+        <div
+          className={`grid gap-6 ${
+            cardsCount === 1
+              ? "grid-cols-1"
+              : cardsCount === 2
+              ? "grid-cols-2"
+              : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+          }`}
+        >
           {visibleProjects.map((project, idx) => (
             <div
               key={`${project.id}-${startIndex}-${idx}`}
