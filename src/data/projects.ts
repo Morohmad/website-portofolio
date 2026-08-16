@@ -9,7 +9,7 @@ export const projectsData = [
     description:
       "Fine-tuning IndoBERT-base (FP16 mixed-precision) pada ±740k ulasan DANA untuk 3-class sentiment analysis dengan 88.61% accuracy dan 86.64% F1-score.",
 
-    image: "/profile.jpeg",
+    image: "/sentimen.png",
 
     metrics: "740K+ Reviews | 88.61% Accuracy",
 
@@ -60,7 +60,7 @@ export const projectsData = [
     description:
       "Clustering Indonesian airports based on domestic air traffic dynamics and passenger volume using K-Means algorithm.",
 
-    image: "/profile.jpeg",
+    image: "/skripsi.png",
 
     metrics: "3 Traffic Clusters | 2015–2023",
 
@@ -85,7 +85,7 @@ export const projectsData = [
     description:
       "Predictive modeling for greenhouse gas emissions using Random Forest Regression and Prophet time series forecasting.",
 
-    image: "/profile.jpeg",
+    image: "/msib.png",
 
     metrics: "Regression | Time Series Forecasting",
 
