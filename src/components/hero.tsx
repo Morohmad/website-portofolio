@@ -17,7 +17,7 @@ export default function Hero() {
           {/* Badge Status */}
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyber-card border border-cyber-border text-cyber-accent font-mono text-xs mb-5">
             <Terminal className="w-3.5 h-3.5" />
-            <span>System.initialize("Portfolio")</span>
+            <span>Portfolio</span>
           </div>
 
           {/* Name */}
@@ -108,7 +108,7 @@ export default function Hero() {
 
             {/* Accent Corner Badge */}
             <div className="absolute -bottom-3 -right-3 px-3 py-1 bg-slate-900 border border-cyber-accent text-cyber-accent font-mono text-[11px] rounded-md shadow-lg">
-              Data Enthusiast
+              Data & AI Enthusiast
             </div>
 
           </div>

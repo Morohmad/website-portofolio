@@ -9,18 +9,6 @@ export interface ExperienceItem {
 
 export const experiences: ExperienceItem[] = [
   {
-    id: "exp-1",
-    period: "2025",
-    role: "Machine Learning & AI Engineer",
-    organization: "BI-OJK Hackathon 2025 (Hyperion Team)",
-    description: [
-      "Mengembangkan SATUKAN, prototipe sistem otentikasi bantuan sosial terintegrasi facial recognition dan validasi lokasi.",
-      "Menerapkan model FaceNet dan DeepFace untuk ekstraksi fitur wajah serta verifikasi identitas real-time.",
-      "Membangun pipeline otentikasi wajah menggunakan Python, TensorFlow, dan OpenCV."
-    ],
-    skills: ["Python", "TensorFlow", "OpenCV", "FaceNet", "DeepFace", "AI Authentication"]
-  },
-  {
     id: "exp-2",
     period: "2025",
     role: "Data Scientist / ML Developer",

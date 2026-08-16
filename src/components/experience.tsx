@@ -13,7 +13,7 @@ export default function Experience() {
         <div className="flex items-center gap-3 mb-12">
           <Terminal className="w-6 h-6 text-cyber-accent" />
           <h2 className="text-2xl md:text-3xl font-bold text-white tracking-wide">
-            <span className="text-cyber-accent font-mono">02.</span> Experience & Research
+            <span className="text-cyber-accent font-mono">02.</span> Experience & Activities
           </h2>
         </div>
 

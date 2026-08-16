@@ -1,39 +1,101 @@
-export interface ProjectItem {
-  id: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  techStack: string[];
-  metrics?: string;
-  githubUrl?: string;
-}
+export const projectsData = [
+  {
+    id: "1",
 
-export const projectsData: ProjectItem[] = [
+    title: "IndoBERT Sentiment Analysis — DANA App Reviews",
+
+    subtitle: "NLP & Sentiment Classification",
+
+    description:
+      "Fine-tuning IndoBERT-base (FP16 mixed-precision) pada ±740k ulasan DANA untuk 3-class sentiment analysis dengan 88.61% accuracy dan 86.64% F1-score.",
+
+    image: "/profile.jpeg",
+
+    metrics: "740K+ Reviews | 88.61% Accuracy",
+
+    githubUrl: "https://github.com/Morohmad",
+
+    techStack: [
+      "Python",
+      "PyTorch",
+      "Hugging Face",
+      "IndoBERT",
+      "Scikit-Learn",
+      "Pandas",
+    ],
+  },
+
   {
-    id: "proj-1",
-    title: "SATUKAN - Social Assistance Authentication System",
+    id: "2",
+
+    title: "SATUKAN - Social Assistance Verification System",
+
     subtitle: "BI-OJK Hackathon 2025",
-    description: "Sistem verifikasi penerima bantuan sosial menggunakan integrasi pengenalan wajah (FaceNet/DeepFace) dan validasi geolokasi untuk mencegah duplikasi dan kecurangan.",
-    techStack: ["Python", "TensorFlow", "OpenCV", "FaceNet", "DeepFace"],
-    metrics: "Real-time Identity Verification",
-    githubUrl: "https://github.com/Morohmad"
+
+    description:
+      "Beneficiary identity verification system integrating facial recognition and geolocation validation to prevent duplicate aid disbursement.",
+
+    image: "/profile.jpeg",
+
+    metrics: "Face Recognition",
+
+    githubUrl: "https://github.com/Morohmad",
+
+    techStack: [
+      "Python",
+      "TensorFlow",
+      "OpenCV",
+      "FaceNet",
+      "DeepFace",
+    ],
   },
+
   {
-    id: "proj-2",
-    title: "Indonesia Airport Clustering",
+    id: "3",
+
+    title: "Indonesian Airport Traffic Clustering",
+
     subtitle: "Undergraduate Thesis Project",
-    description: "Analisis dan pengelompokan bandara di Indonesia berdasarkan dinamika lalu lintas angkutan udara domestik memanfaatkan algoritma K-Means.",
-    techStack: ["Python", "K-Means", "Scikit-Learn", "Pandas", "EDA"],
-    metrics: "Domestic Air Traffic Dataset",
-    githubUrl: "https://github.com/Morohmad"
+
+    description:
+      "Clustering Indonesian airports based on domestic air traffic dynamics and passenger volume using K-Means algorithm.",
+
+    image: "/profile.jpeg",
+
+    metrics: "3 Traffic Clusters | 2015–2023",
+
+    githubUrl: "https://github.com/Morohmad",
+
+    techStack: [
+      "Python",
+      "K-Means",
+      "Scikit-Learn",
+      "Pandas",
+      "EDA",
+    ],
   },
+
   {
-    id: "proj-3",
+    id: "4",
+
     title: "GHG Emission Prediction & Forecasting",
-    subtitle: "MSIB Startup Campus Final Project",
-    description: "Pemodelan prediktif emisi gas rumah kaca berbasis Random Forest Regression dan analisis tren masa depan emisi Indonesia menggunakan algoritma Prophet.",
-    techStack: ["Random Forest", "Prophet", "Tableau", "Scikit-Learn"],
-    metrics: "Prophet MAPE: 2.21% | RF MAPE: 6.60%",
-    githubUrl: "https://github.com/Morohmad"
-  }
+
+    subtitle: "MSIB Final Project",
+
+    description:
+      "Predictive modeling for greenhouse gas emissions using Random Forest Regression and Prophet time series forecasting.",
+
+    image: "/profile.jpeg",
+
+    metrics: "Regression | Time Series Forecasting",
+
+    githubUrl: "https://github.com/Morohmad",
+
+    techStack: [
+      "Python",
+      "Random Forest",
+      "Prophet",
+      "Scikit-Learn",
+    ],
+  },
 ];
