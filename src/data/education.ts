@@ -9,11 +9,11 @@ export const educationData = {
     journal: "Jurnal Teknoinfo",
     journalUrl: "https://publikasi.teknokrat.ac.id/index.php/teknoinfo/article/view/1808",
     highlights: [
-      "Dataset & Variabel: Memproses data historis HUBNET Kemenhub (2015–2023) mencakup 5 variabel: pergerakan pesawat, penumpang, bagasi, kargo, dan pengiriman pos.",
-      "Pipeline & Metode: Menjalankan EDA, preprocessing, feature selection, dan K-Means Clustering dengan evaluasi Elbow, Silhouette Score (0.6254), Calinski-Harabasz (3543.93), serta Davies-Bouldin (0.5938).",
-      "Representasi Klaster (K=3): Membagi hierarki bandara menjadi 260 aktivitas rendah, 1.063 aktivitas sedang, dan 627 aktivitas tinggi.",
-      "Analisis Temporal: Mengidentifikasi 233 transisi klaster pada 123 bandara, dengan lonjakan kenaikan aktivitas tertinggi pada 2016 (31 bandara) dan penurunan terbesar pada 2018 (23 bandara).",
-    ],
+    "Dataset & Variables: Processed historical HUBNET data from the Ministry of Transportation (2015–2023), covering 5 variables: aircraft movements, passengers, baggage, cargo, and mail.",
+    "Pipeline & Methods: Performed EDA, preprocessing, feature selection, and K-Means Clustering, evaluated using the Elbow Method, Silhouette Score (0.6254), Calinski-Harabasz Index (3543.93), and Davies-Bouldin Index (0.5938).",
+    "Cluster Representation (K=3): Grouped airports into 260 low-activity, 1,063 medium-activity, and 627 high-activity airports.",
+    "Temporal Analysis: Identified 233 cluster transitions across 123 airports, with the highest increase in activity in 2016 (31 airports) and the largest decrease in 2018 (23 airports).",
+  ],
   },
   coursework: [
     "Machine Learning",

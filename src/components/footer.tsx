@@ -18,9 +18,8 @@ export default function Footer() {
           Let's Connect & Collaborate
         </h2>
 
-        {/* Subtitle / Description */}
         <p className="text-slate-300 text-xs md:text-sm max-w-lg leading-relaxed mb-5">
-          Terbuka untuk peluang riset, kolaborasi proyek Machine Learning, maupun posisi Data Science & AI.
+          Interested in developing data-driven solutions and open to opportunities in the fields of Data Science and Artificial Intelligence.
         </p>
 
         {/* Action Button: Langsung ke Gmail dengan Logo Berwarna Asli */}
@@ -54,7 +53,7 @@ export default function Footer() {
               d="M12 5.38c1.54 0 2.93.53 4.02 1.57l3.01-3.01C17.21 2.22 14.84 1.5 12 1.5 7.97 1.5 4.43 3.66 2.69 7.37l3.65 2.84c.8-2.39 3.03-4.17 5.66-4.17z"
             />
           </svg>
-          <span>Kirim Email</span>
+          <span>Send Email</span>
         </a>
 
         {/* Location & Social Links Info */}
