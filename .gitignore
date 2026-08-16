@@ -16,6 +16,9 @@
 /build
 *.tsbuildinfo
 
+# Next.js App Router generated types
+next-env.d.ts
+
 # Environment variables (Aman dari kebocoran API Key/Secrets)
 .env
 .env*.local
