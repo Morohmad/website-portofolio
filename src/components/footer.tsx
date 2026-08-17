@@ -5,9 +5,12 @@ import { profileData } from "../data/profile";
 import { MapPin } from "lucide-react";
 
 export default function Footer() {
-  // Menyiapkan email tujuan dan URL compose Gmail langsung
-  const rawEmail = profileData.contacts.email.replace("mailto:", "").trim();
-  const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${rawEmail}`;
+  // Menggunakan skema mailto standar agar langsung membuka aplikasi email bawaan / Gmail di mobile & desktop
+  const rawEmail = profileData.contacts.email
+    .replace(/^https?:\/\/mail\.google\.com\/mail\/\?view=cm&fs=1&to=/, "")
+    .replace(/^mailto:/, "")
+    .trim();
+  const mailtoUrl = `mailto:${rawEmail}`;
 
   return (
     <footer id="contact" className="py-8 bg-cyber-card/60 border-t border-cyber-border/80 relative">
@@ -22,11 +25,9 @@ export default function Footer() {
           Interested in developing data-driven solutions and open to opportunities in the fields of Data Science and Artificial Intelligence.
         </p>
 
-        {/* Action Button: Langsung ke Gmail dengan Logo Berwarna Asli */}
+        {/* Action Button: Langsung ke Aplikasi Email */}
         <a
-          href={gmailComposeUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+          href={mailtoUrl}
           className="
             inline-flex items-center gap-2.5 px-5 py-2.5 mb-6 rounded-lg 
             bg-slate-900 border border-cyber-border/80 text-white font-medium text-xs md:text-sm
