@@ -1,6 +1,6 @@
 export const profileData = {
   name: "Mohammad Rohmad Nurkhoirofiq",
-  role: "Data Science & Ai Specialist | Informatics Engineering Graduate",
+  role: "Data Science & AI Specialist | Informatics Engineering Graduate",
   tagline: "Leveraging data and artificial intelligence to support decision-making and solve real-world problems.",
  about: "Informatics Engineering graduate from Sriwijaya University with a focus on Data Science and Artificial Intelligence. Skilled in data analysis, predictive modeling, statistical analysis, and machine learning/deep learning development.",
   contacts: {
