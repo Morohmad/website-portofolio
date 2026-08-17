@@ -2,15 +2,29 @@
 
 import React from "react";
 import { profileData } from "../data/profile";
-import { MapPin } from "lucide-react";
+import { MapPin, Mail } from "lucide-react";
 
 export default function Footer() {
-  // Menggunakan skema mailto standar agar langsung membuka aplikasi email bawaan / Gmail di mobile & desktop
-  const rawEmail = profileData.contacts.email
-    .replace(/^https?:\/\/mail\.google\.com\/mail\/\?view=cm&fs=1&to=/, "")
-    .replace(/^mailto:/, "")
-    .trim();
-  const mailtoUrl = `mailto:${rawEmail}`;
+  const cleanEmail = profileData.contacts.email.replace("mailto:", "").trim();
+
+  // Handler cerdas agar HP langsung memicu Aplikasi Gmail resmi
+  const handleEmailClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const isAndroid = /Android/i.test(navigator.userAgent);
+    const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if (isAndroid) {
+      e.preventDefault();
+      // Memicu Intent Aplikasi Resmi Gmail di Android
+      window.location.href = `intent:#Intent;scheme=mailto;package=com.google.android.gm;S.browser_fallback_url=mailto:${cleanEmail};end`;
+    } else if (isIOS) {
+      e.preventDefault();
+      // Memicu Skema Deep-link Aplikasi Gmail di iOS
+      window.location.href = `googlegmail:///co?to=${cleanEmail}`;
+      setTimeout(() => {
+        window.location.href = `mailto:${cleanEmail}`;
+      }, 500);
+    }
+  };
 
   return (
     <footer id="contact" className="py-8 bg-cyber-card/60 border-t border-cyber-border/80 relative">
@@ -18,16 +32,17 @@ export default function Footer() {
         
         {/* Title Ringkas */}
         <h2 className="text-xl md:text-2xl font-bold text-white tracking-tight mb-2">
-          Let's Connect & Collaborate
+          Let&apos;s Connect & Collaborate
         </h2>
 
         <p className="text-slate-300 text-xs md:text-sm max-w-lg leading-relaxed mb-5">
           Interested in developing data-driven solutions and open to opportunities in the fields of Data Science and Artificial Intelligence.
         </p>
 
-        {/* Action Button: Langsung ke Aplikasi Email */}
+        {/* Action Button: Langsung ke Aplikasi Gmail di HP */}
         <a
-          href={mailtoUrl}
+          href={`mailto:${cleanEmail}`}
+          onClick={handleEmailClick}
           className="
             inline-flex items-center gap-2.5 px-5 py-2.5 mb-6 rounded-lg 
             bg-slate-900 border border-cyber-border/80 text-white font-medium text-xs md:text-sm
@@ -35,7 +50,7 @@ export default function Footer() {
             shadow-md shadow-black/30 hover:shadow-cyan-500/10
           "
         >
-          {/* Logo Asli Gmail (SVG Vector 4 Warna Resmi Google) */}
+          {/* Logo Asli Gmail (4 Warna Resmi Google) */}
           <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24">
             <path
               fill="#4285F4"
@@ -97,7 +112,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <p className="text-[11px] font-mono text-slate-400">
-          Designed & Built by <span className="text-slate-200 font-semibold">{profileData.name}</span> © {new Date().getFullYear()}
+          Designed & Built by <span className="text-slate-200 font-semibold">{profileData.name}</span> &copy; {new Date().getFullYear()}
         </p>
 
       </div>
