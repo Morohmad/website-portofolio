@@ -41,7 +41,7 @@ export default function Navbar() {
         {/* Action Controls: Resume Button + Mobile Hamburger */}
         <div className="flex items-center gap-3">
           <a
-            href="/resume.pdf"
+            href="/CV - Mohammad Rohmad Nurkhoirofiq.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-2.5 rounded-lg border border-cyber-accent text-cyber-accent hover:bg-cyber-accent/10 transition-colors font-mono text-sm font-semibold"
