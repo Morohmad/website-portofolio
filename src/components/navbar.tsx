@@ -10,7 +10,7 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-cyber-bg/90 backdrop-blur-md border-b border-cyber-border/60">
       <div className="w-full max-w-[1400px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
         
-        {/* Brand Logo - Asli */}
+        {/* Brand Logo */}
         <a 
           href="#" 
           className="flex items-center gap-2.5 text-white font-mono text-lg md:text-xl font-bold hover:text-cyber-accent transition-colors"
@@ -19,8 +19,8 @@ export default function Navbar() {
           <span>morohmad.</span>
         </a>
 
-        {/* Navigation Links Desktop - 100% Asli */}
-        <nav className="hidden md:flex items-center gap-8 font-mono text-sm md:text-base font-medium">
+        {/* Navigation Links Desktop (01 s.d 05 Lengkap) */}
+        <nav className="hidden md:flex items-center gap-7 lg:gap-8 font-mono text-sm md:text-base font-medium">
           <a href="#education" className="text-cyber-text hover:text-cyber-accent transition-colors">
             <span className="text-cyber-accent font-semibold">01.</span> Education
           </a>
@@ -30,14 +30,16 @@ export default function Navbar() {
           <a href="#projects" className="text-cyber-text hover:text-cyber-accent transition-colors">
             <span className="text-cyber-accent font-semibold">03.</span> Projects
           </a>
+          <a href="#skills" className="text-cyber-text hover:text-cyber-accent transition-colors">
+            <span className="text-cyber-accent font-semibold">04.</span> Skills
+          </a>
           <a href="#contact" className="text-cyber-text hover:text-cyber-accent transition-colors">
-            <span className="text-cyber-accent font-semibold">04.</span> Contact
+            <span className="text-cyber-accent font-semibold">05.</span> Contact
           </a>
         </nav>
 
         {/* Action Controls: Resume Button + Mobile Hamburger */}
         <div className="flex items-center gap-3">
-          {/* Resume Button - Style & Ukuran Asli */}
           <a
             href="/resume.pdf"
             target="_blank"
@@ -47,7 +49,7 @@ export default function Navbar() {
             resume.pdf
           </a>
 
-          {/* Tombol Garis Tiga (Hanya Tampil di Layar HP) */}
+          {/* Tombol Hamburger Mobile */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="p-2 md:hidden rounded-lg bg-cyber-card border border-cyber-border text-slate-300 hover:text-cyber-accent transition-colors focus:outline-none"
@@ -59,10 +61,10 @@ export default function Navbar() {
 
       </div>
 
-      {/* Dropdown Menu Mobile (Hanya Muncul saat Garis 3 Diklik di HP) */}
+      {/* Dropdown Menu Mobile */}
       {isOpen && (
         <div className="md:hidden bg-cyber-card/95 backdrop-blur-lg border-b border-cyber-border px-6 py-5 shadow-2xl">
-          <nav className="flex flex-col gap-4 font-mono text-sm">
+          <nav className="flex flex-col gap-3.5 font-mono text-sm">
             <a
               href="#education"
               onClick={() => setIsOpen(false)}
@@ -85,11 +87,18 @@ export default function Navbar() {
               <span className="text-cyber-accent font-semibold">03.</span> Projects
             </a>
             <a
+              href="#skills"
+              onClick={() => setIsOpen(false)}
+              className="text-cyber-text hover:text-cyber-accent transition-colors py-1.5 border-b border-cyber-border/40"
+            >
+              <span className="text-cyber-accent font-semibold">04.</span> Skills
+            </a>
+            <a
               href="#contact"
               onClick={() => setIsOpen(false)}
               className="text-cyber-text hover:text-cyber-accent transition-colors py-1.5"
             >
-              <span className="text-cyber-accent font-semibold">04.</span> Contact
+              <span className="text-cyber-accent font-semibold">05.</span> Contact
             </a>
           </nav>
         </div>

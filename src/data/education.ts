@@ -6,7 +6,7 @@ export const educationData = {
   thesis: {
     title:
       "Airport Clustering in Indonesia Based on Domestic Air Transportation Traffic Using the K-Means Algorithm",
-    journal: "Jurnal Teknoinfo",
+    journal: "Jurnal Teknoinfo Sinta 4",
     journalUrl: "https://publikasi.teknokrat.ac.id/index.php/teknoinfo/article/view/1808",
     highlights: [
     "Dataset & Variables: Processed historical HUBNET data from the Ministry of Transportation (2015–2023), covering 5 variables: aircraft movements, passengers, baggage, cargo, and mail.",

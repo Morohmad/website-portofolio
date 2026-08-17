@@ -13,7 +13,7 @@ export const projectsData = [
 
     metrics: "740K+ Reviews | 88.61% Accuracy",
 
-    githubUrl: "https://github.com/Morohmad",
+    githubUrl: "https://github.com/Morohmad/analisis-sentimen-review-aplikasi-dana-indobert.git",
 
     techStack: [
       "Python",
@@ -39,7 +39,7 @@ export const projectsData = [
 
     metrics: "Face Recognition",
 
-    githubUrl: "https://github.com/Morohmad",
+    githubUrl: "https://github.com/Morohmad/BI-OJK-HACKATHON-2025-proposal.git",
 
     techStack: [
       "Python",
@@ -64,7 +64,7 @@ export const projectsData = [
 
     metrics: "3 Traffic Clusters | 2015–2023",
 
-    githubUrl: "https://github.com/Morohmad",
+    githubUrl: "https://github.com/Morohmad/skripsi-klasterisasi-bandara-di-Indonesia.git",
 
     techStack: [
       "Python",
@@ -89,7 +89,7 @@ export const projectsData = [
 
     metrics: "Regression | Time Series Forecasting",
 
-    githubUrl: "https://github.com/Morohmad",
+    githubUrl: "https://github.com/Morohmad/MSIB-project.git",
 
     techStack: [
       "Python",
